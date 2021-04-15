@@ -12,5 +12,10 @@ In the above paper, we propose a generative SToRM model for the reconstruction o
 
 The code then did the jobs that are mentioned in the above paragraph.
 
+### The cost function:
+The code solves for the following cost function:
+![image](https://user-images.githubusercontent.com/36931917/114894290-20920480-9dd4-11eb-93ce-58ef3e4a33ed.png)
+
+
 
 Main file: gen_storm_main.py
