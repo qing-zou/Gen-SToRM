@@ -50,3 +50,5 @@ dataAndOperators.py is used to prepare the data and define some necessary operat
 
 generator.py is used the build the generator using the CNN.
 
+latentVariable.py is used to process the latent vectors.
+
