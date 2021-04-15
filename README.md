@@ -34,4 +34,15 @@ Since the data in this work are collected using the spiral trajectories and each
 The code relies on the NUFFT operator and we used the torchkbnufft repository to have the NUFFT operator. But note that the torchkbnufft version used in this repository is not the most recent one. You can download the .zip file for the torchkbnufft under this repository. To use it, you can just unzip it and put it in your working folder.
 Note that the torchkbnufft version that we used in this repository does not support complex number. However, the most recent version (https://github.com/mmuckley/torchkbnufft) is able to support complex number. But you need to make sure that your PyTorch version is above 1.5.0 so that complex type data can be supported.
 
-Main file: gen_storm_main.py
+#### Dataset:
+We have released one dataset used in this paper. You can download the full dataset from the following link:
+(Link will be released later)
+
+
+#### Run the code:
+To run the code, we just need to run the main file: gen_storm_main.py
+
+The code is written in PyTorch. Also, one needs to make sure that a working GPU is installed. The requirement for the GPU is 16GB. If you have a smaller GPU, you can reduce the number of the frames being processed to fit the GPU.
+
+#### Files description:
+
