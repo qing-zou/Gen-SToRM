@@ -52,3 +52,7 @@ generator.py is used the build the generator using the CNN.
 
 latentVariable.py is used to process the latent vectors.
 
+optimize_generator.py is used to solve the cost function. We use the Adam optimization to solve the cost function in this work.
+
+#### Final notes:
+The code is provided to support reproducible research. If the code is giving any error or some files are missing then you may open an issue or directly email me at zou-qing@uiowa.edu
