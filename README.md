@@ -13,9 +13,13 @@ In the above paper, we propose a generative SToRM model for the reconstruction o
 The code then did the jobs that are mentioned in the above paragraph.
 
 #### The cost function:
-The code solves for the following cost function:
+The following figure shows the basic idea of the work.
+![image](https://user-images.githubusercontent.com/36931917/114895176-e4ab6f00-9dd4-11eb-91c7-5dc3ad214f8b.png)
+
+We feed a set of latent vectors into the generator (G_theta) and the generator is then able to generate the images in the time series. We then perform the non-uniform Fourier Transform (NUFFT) to get the k-t space data of the generated images and compare them with the collected k-t space data. Based on which, we have the following cost function and the code solves for the cost function:
 ![image](https://user-images.githubusercontent.com/36931917/114894290-20920480-9dd4-11eb-93ce-58ef3e4a33ed.png)
-$A_i$
+
+A_i here means the non-uniform Fourier transform. b is the acquired undersampled k-t space data. In this work, we use the golden angle spiral trajectories to acquired the k-t space data.
 
 
 Main file: gen_storm_main.py
