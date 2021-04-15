@@ -48,3 +48,5 @@ The code is written in PyTorch. Also, one needs to make sure that a working GPU 
 dataAndOperators.py is used to prepare the data and define some necessary operator. The data in this work is acquired using the spiral trajectories and we bin every 6 spirals to get one frame. We also did the coil combination and coil sensitivity map estimation in this file. If your data is acquired in a different acquisition scheme, you can change this file to fit your data acquisition scheme. The necessary operators such us NUFFT are defined in this file as well.
 
 
+generator.py is used the build the generator using the CNN.
+
