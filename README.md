@@ -12,7 +12,7 @@ In the above paper, we propose a generative SToRM model for the reconstruction o
 
 The code then did the jobs that are mentioned in the above paragraph.
 
-#### The cost function:
+#### The idea of the work and the cost function:
 The following figure shows the basic idea of the work.
 ![image](https://user-images.githubusercontent.com/36931917/114895176-e4ab6f00-9dd4-11eb-91c7-5dc3ad214f8b.png)
 
@@ -20,6 +20,13 @@ We feed a set of latent vectors into the generator (G_theta) and the generator i
 ![image](https://user-images.githubusercontent.com/36931917/114894290-20920480-9dd4-11eb-93ce-58ef3e4a33ed.png)
 
 A_i here means the non-uniform Fourier transform. b is the acquired undersampled k-t space data. In this work, we use the golden angle spiral trajectories to acquired the k-t space data.
+
+#### The progressive training-in-time approach
+Since the data in this work are collected using the spiral trajectories and each frame will have different spirals and hence we need different NUFFT operators for different frames. Therefore the computational complexity will be very high to directly solving the cost function. Hence we propose a progressive training-in-time approach to speed up the process. The following figure shows the idea of this approach. The detailed description of this approch can be found in the paper above.
+![image](https://user-images.githubusercontent.com/36931917/114896036-99459080-9dd5-11eb-89c1-cec952c4015f.png)
+
+
+
 
 
 Main file: gen_storm_main.py
