@@ -45,4 +45,6 @@ To run the code, we just need to run the main file: gen_storm_main.py
 The code is written in PyTorch. Also, one needs to make sure that a working GPU is installed. The requirement for the GPU is 16GB. If you have a smaller GPU, you can reduce the number of the frames being processed to fit the GPU.
 
 #### Files description:
+dataAndOperators.py is used to prepare the data and define some necessary operator. The data in this work is acquired using the spiral trajectories and we bin every 6 spirals to get one frame. We also did the coil combination and coil sensitivity map estimation in this file. If your data is acquired in a different acquisition scheme, you can change this file to fit your data acquisition scheme. The necessary operators such us NUFFT are defined in this file as well.
+
 
