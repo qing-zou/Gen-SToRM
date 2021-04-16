@@ -56,7 +56,13 @@ latentVariable.py is used to process the latent vectors.
 
 optimize_generator.py is used to solve the cost function. We use the Adam optimization to solve the cost function in this work.
 
+The esprit folder contains the ESPRIT function which is used to estimate the coil sensitivity map.
+
 We provided one examplar reconstruction for one slice using the above dataset in the example folder.
 
 #### Final notes:
-The code is provided to support reproducible research. If the code is giving any error or some files are missing then you may open an issue or directly email me at zou-qing@uiowa.edu
+The code is provided to support reproducible research. 
+
+The dataset is not public and has copyright. If you use this dataset in your research, please cite our work.
+
+If the code is giving any error or some files are missing then you may open an issue or directly email me at zou-qing@uiowa.edu
