@@ -36,8 +36,10 @@ Note that the torchkbnufft version that we used in this repository does not supp
 
 #### Dataset:
 We have released one dataset used in this paper. You can download the full dataset from the following link:
-(Link will be released later)
 
+https://drive.google.com/file/d/1whgyHXcuY5JKCoa5-EZ9PzFjJt43rPq1/view?usp=sharing
+
+This dataset contains 8 image slices. The k-t space data, the kspace trajectories and the density compensation functions are included in the file.
 
 #### Run the code:
 To run the code, we just need to run the main file: gen_storm_main.py
@@ -53,6 +55,8 @@ generator.py is used the build the generator using the CNN.
 latentVariable.py is used to process the latent vectors.
 
 optimize_generator.py is used to solve the cost function. We use the Adam optimization to solve the cost function in this work.
+
+We provided one examplar reconstruction for one slice using the above dataset in the example folder.
 
 #### Final notes:
 The code is provided to support reproducible research. If the code is giving any error or some files are missing then you may open an issue or directly email me at zou-qing@uiowa.edu
