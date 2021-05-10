@@ -41,6 +41,8 @@ https://drive.google.com/file/d/1whgyHXcuY5JKCoa5-EZ9PzFjJt43rPq1/view?usp=shari
 
 This dataset contains 8 image slices. The k-t space data, the kspace trajectories and the density compensation functions are included in the file.
 
+The dataset is **NOT public** and has copyright. If you want to use this dataset in your research, please contact us at zou-qing@uiowa.edu
+
 ### Run the code:
 To run the code, we just need to run the main file: gen_storm_main.py
 
