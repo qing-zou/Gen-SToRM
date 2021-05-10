@@ -63,6 +63,6 @@ We provided one examplar reconstruction for one slice using the above dataset in
 #### Final notes:
 The code is provided to support reproducible research. 
 
-The dataset is not public and has copyright. If you use this dataset in your research, please cite our work.
+The dataset is **NOT public** and has copyright. If you want to use this dataset in your research, please contact us at zou-qing@uiowa.edu
 
 If the code is giving any error or some files are missing then you may open an issue or directly email me at zou-qing@uiowa.edu
