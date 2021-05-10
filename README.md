@@ -47,18 +47,18 @@ To run the code, we just need to run the main file: gen_storm_main.py
 The code is written in PyTorch. Also, one needs to make sure that a working GPU is installed. The requirement for the GPU is 16GB. If you have a smaller GPU, you can reduce the number of the frames being processed to fit the GPU.
 
 #### Files description:
-dataAndOperators.py is used to prepare the data and define some necessary operator. The data in this work is acquired using the spiral trajectories and we bin every 6 spirals to get one frame. We also did the coil combination and coil sensitivity map estimation in this file. If your data is acquired in a different acquisition scheme, you can change this file to fit your data acquisition scheme. The necessary operators such us NUFFT are defined in this file as well.
+**dataAndOperators.py** is used to prepare the data and define some necessary operator. The data in this work is acquired using the spiral trajectories and we bin every 6 spirals to get one frame. We also did the coil combination and coil sensitivity map estimation in this file. If your data is acquired in a different acquisition scheme, you can change this file to fit your data acquisition scheme. The necessary operators such us NUFFT are defined in this file as well.
 
 
-generator.py is used the build the generator using the CNN.
+**generator.py** is used the build the generator using the CNN.
 
-latentVariable.py is used to process the latent vectors.
+**latentVariable.py** is used to process the latent vectors.
 
-optimize_generator.py is used to solve the cost function. We use the Adam optimization to solve the cost function in this work.
+**optimize_generator.py** is used to solve the cost function. We use the Adam optimization to solve the cost function in this work.
 
-The esprit folder contains the ESPRIT function which is used to estimate the coil sensitivity map.
+The **esprit folder** contains the ESPRIT function which is used to estimate the coil sensitivity map.
 
-We provided one examplar reconstruction for one slice using the above dataset in the example folder.
+We provided one examplar reconstruction for one slice using the above dataset in the **example folder**.
 
 #### Final notes:
 The code is provided to support reproducible research. 
