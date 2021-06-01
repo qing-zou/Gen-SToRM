@@ -43,16 +43,33 @@ This dataset contains 8 image slices. The k-t space data, the kspace trajectorie
 
 The dataset is **NOT public** and has copyright. If you want to use this dataset in your research, please contact us at zou-qing@uiowa.edu
 
+### Before running the code: A word about the generator
+There are several commnon ways to bulid the generator, even though all named as CNN generator. In this work, we tried two ways for buliding the generator:
+**1.** Using ConvTranspose2d
+**2.** Using Conv2d + Upsampling
+
+Both the two ways have their own advantages and disadvantages.
+
+For buliding the generator using ConvTranspose2d, one common complain would be the checkerboard artifacts (https://distill.pub/2016/deconv-checkerboard/). There are actually ways to avoid the checkerboard artifacts using ConvTranspose2d, the simplest ways are trying different initializations and/or running more epoches. But the advantage of ConvTranspose2d is that it can produce good results quickly and it needs less GPU memory. For example, in our setting, using ConvTranspose2d just needs 16G GPU to get good results.
+
+For buliding the generator using Conv2d, it can completely overcome the checkerboard artifacts. However, it may take longer time to get good results. Also, the GPU requirement is higher, we have to use a 32G GPU card to get comparable results as using ConvTranspose2d. Also, the "mode" used in the upsampling layer will affect the results a lot. In this work, we used the nearest neighbor interpolation for upsampling. One can also try to set "mode=bilinear" to see the results or other interpolation methods to do the upsampling. The results are sensitive to the interpolation methods. One may try different interpolation methods to see which one will give you the best results. When one tries the linearly interpolting, don't forget to set "lign_corners = True".
+
 ### Run the code:
-To run the code, we just need to run the main file: gen_storm_main.py
+For the ConvTranspose2d case, run the code, we just need to run the main file: gen_storm_main.py
 
 The code is written in PyTorch. Also, one needs to make sure that a working GPU is installed. The requirement for the GPU is 16GB. If you have a smaller GPU, you can reduce the number of the frames being processed to fit the GPU.
+
+For the Conv2d + Upsampling case, to run the algorithm, we just need to run the main file: gen_storm_upsamp.py
+
+In this setting, one needs to make sure that a working GPU is installed. The requirement for the GPU is 32GB. If you have a smaller GPU, you can reduce the number of the frames being processed to fit the GPU.
 
 ### Files description:
 **dataAndOperators.py** is used to prepare the data and define some necessary operator. The data in this work is acquired using the spiral trajectories and we bin every 6 spirals to get one frame. We also did the coil combination and coil sensitivity map estimation in this file. If your data is acquired in a different acquisition scheme, you can change this file to fit your data acquisition scheme. The necessary operators such us NUFFT are defined in this file as well.
 
 
-**generator.py** is used the build the generator using the CNN.
+**generator.py** is used the build the generator using the CNN (ConvTranspose2d).
+
+**generator_upsamp.py** is used the build the generator using the CNN (Conv2d + Upsampling).
 
 **latentVariable.py** is used to process the latent vectors.
 
