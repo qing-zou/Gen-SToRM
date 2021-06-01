@@ -59,7 +59,7 @@ For the ConvTranspose2d case, run the code, we just need to run the main file: g
 
 The code is written in PyTorch. Also, one needs to make sure that a working GPU is installed. The requirement for the GPU is 16GB. If you have a smaller GPU, you can reduce the number of the frames being processed to fit the GPU.
 
-For the Conv2d + Upsampling case, to run the algorithm, we just need to run the main file: gen_storm_upsamp.py
+For the Conv2d + Upsampling case, to run the algorithm, we just need to run the main file: gen_storm_upsamp_main.py
 
 In this setting, one needs to make sure that a working GPU is installed. The requirement for the GPU is 32GB. If you have a smaller GPU, you can reduce the number of the frames being processed to fit the GPU.
 
